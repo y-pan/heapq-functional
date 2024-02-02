@@ -1,5 +1,5 @@
 {
-  "name": "heapq",
+  "name": "heapq-functional",
   "version": "1.0.0",
   "description": "Heapq functional module, ported from heapq in Python",
   "main": "index.ts",
