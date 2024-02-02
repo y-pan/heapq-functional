@@ -1,0 +1,38 @@
+{
+  "name": "heapq",
+  "version": "1.0.0",
+  "description": "Heapq functional module, ported from heapq in Python",
+  "main": "index.ts",
+  "types": "index.d.ts",
+  "scripts": {
+    "test": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/y-pan/heapq.git"
+  },
+  "keywords": [
+    "Heapq",
+    "heap",
+    "functional",
+    "priority",
+    "priority-queue",
+    "priorityQueue",
+    "heapify"
+  ],
+  "author": "ypan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/y-pan/heapq/issues"
+  },
+  "homepage": "https://github.com/y-pan/heapq#readme",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.20.0",
+    "eslint": "^8.56.0",
+    "eslint-config-standard-with-typescript": "^43.0.1",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-n": "^16.6.2",
+    "eslint-plugin-promise": "^6.1.1",
+    "typescript": "^5.3.3"
+  }
+}
