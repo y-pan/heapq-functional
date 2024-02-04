@@ -7,7 +7,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "test": "jest",
-    "start": "npx tsc && npm test",
+    "start": "pnpm run lint && pnpm run test",
     "lint": "tsc",
     "build": "tsup index.ts --format cjs,esm --dts"
   },
