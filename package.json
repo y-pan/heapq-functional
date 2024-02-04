@@ -1,6 +1,6 @@
 {
   "name": "heapq-functional",
-  "version": "1.1.2",
+  "version": "1.1.4",
   "description": "Heapq functional module, ported from heapq in Python",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -15,6 +15,11 @@
     "type": "git",
     "url": "git+ssh://git@github.com/y-pan/heapq-functional.git"
   },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
   "keywords": [
     "Heapq",
     "heap",
