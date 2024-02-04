@@ -3,7 +3,7 @@ export const heapify = <T>(arr: T[]): void => {
     return;
   }
   for (let i = arr.length; i >= 0; i--) {
-    _heapify(arr, i);
+    _heapifyDown(arr, i);
   }
 };
 
@@ -16,6 +16,7 @@ export const heapPush = <T>(arr: T[], item: T): void => {
     temp = arr[pi];
     arr[pi] = arr[i];
     arr[i] = temp;
+    i = pi;
     pi = Math.floor((i - 1) / 2);
   }
 };
@@ -25,7 +26,7 @@ export const heapPop = <T>(arr: T[]): T => {
   arr[0] = arr[arr.length - 1];
   arr.pop();
 
-  _heapify(arr, 0);
+  _heapifyDown(arr, 0);
   return x;
 };
 
@@ -33,7 +34,7 @@ export const heapMerge = <T>(arr1: T[], arr2: T[]): T[] => {
   return [];
 };
 
-const _heapify = <T>(arr: T[], i: number): void => {
+const _heapifyDown = <T>(arr: T[], i: number): void => {
   let smallest = i;
   let c1 = i * 2 + 1;
   let c2 = i * 2 + 2;
@@ -50,6 +51,6 @@ const _heapify = <T>(arr: T[], i: number): void => {
     arr[smallest] = arr[i];
     arr[i] = temp;
 
-    _heapify(arr, smallest);
+    _heapifyDown(arr, smallest);
   }
 };

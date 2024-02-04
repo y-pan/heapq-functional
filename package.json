@@ -2,11 +2,14 @@
   "name": "heapq-functional",
   "version": "1.1.2",
   "description": "Heapq functional module, ported from heapq in Python",
-  "main": "index.ts",
-  "types": "index.d.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
   "scripts": {
     "test": "jest",
-    "start": "npx tsc && npm test"
+    "start": "npx tsc && npm test",
+    "lint": "tsc",
+    "build": "tsup index.ts --format cjs,esm --dts"
   },
   "repository": {
     "type": "git",
@@ -22,12 +25,13 @@
     "heapify"
   ],
   "author": "ypan",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/y-pan/heapq-functional/issues"
   },
   "homepage": "https://github.com/y-pan/heapq-functional#readme",
   "devDependencies": {
+    "@changesets/cli": "^2.27.1",
     "@types/jest": "^29.5.12",
     "@typescript-eslint/eslint-plugin": "^6.20.0",
     "eslint": "^8.56.0",
@@ -37,6 +41,7 @@
     "eslint-plugin-promise": "^6.1.1",
     "jest": "^29.7.0",
     "ts-jest": "^29.1.2",
+    "tsup": "^8.0.1",
     "typescript": "^5.3.3"
   }
 }
