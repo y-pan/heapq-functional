@@ -1,0 +1,5 @@
+---
+"heapq-functional": minor
+---
+
+Rebuild
