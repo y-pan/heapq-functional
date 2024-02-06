@@ -1,8 +1,7 @@
-name: Publish
+name: Publish To NPM
 on:
-  push:
-    branches:
-      - "main"
+  release:
+    types: [created]
 
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
@@ -22,15 +21,17 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16.x
+          registry-url: 'https://registry.npmjs.org'
           cache: "pnpm"
 
       - name: Install Dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Create Release Pull Request or Publish
-        id: changesets
-        uses: changesets/action@v1
-        with:
-          publish: pnpm run build
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: build
+        run: pnpm run build
+      
+      - name: Publish package to NPM
+        run: npm publish
+        env: 
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
+      
