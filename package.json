@@ -1,6 +1,6 @@
 {
   "name": "heapq-functional",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "Heapq functional module, ported from heapq in Python",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
